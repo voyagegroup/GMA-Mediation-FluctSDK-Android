@@ -8,7 +8,7 @@ import com.google.android.gms.ads.AdListener
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.InterstitialAd
 
-class MainActivity : AppCompatActivity() {
+class InterstitialActivity : AppCompatActivity() {
 
     companion object {
 
@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
 
         loadButton.setOnClickListener {
             // region Required: 広告の初期化・読込
-            ad = InterstitialAd(this@MainActivity)
+            ad = InterstitialAd(this@InterstitialActivity)
                 .apply {
                     adUnitId = GMA_AD_UNIT_ID
                     adListener = listener

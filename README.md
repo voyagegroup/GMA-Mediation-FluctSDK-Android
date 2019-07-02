@@ -55,7 +55,7 @@ cd android-fluct-gma-interstitial-example
 Google Mobile AdsによるFluctSDK動画インタースティシャルを実装頂く際は、以下の点にご注意ください:
 
 - 必ずAdUnitIdを変更ください
-  - `MainActivity.kt`内で設定されているAdUnitIdはテスト用のものです
+  - `InterstitialActivity.kt`内で設定されているAdUnitIdはテスト用のものです
 - Manifest記述, Proguard記述, 依存モジュールの追加を忘れずに行ってください
   - 本番環境にて予期せぬ問題が発生する場合がございます
 
@@ -64,7 +64,7 @@ Google Mobile AdsによるFluctSDK動画インタースティシャルを実装�
 - `/app/build.gradle`
 - `/app/proguard-rules.pro`
 - `/app/src/main/AndroidManifest.xml`
-- `/app/src/main/java/jp/s64/android/exmaple/gmafluctinterstitial/MainActivity.kt`
+- `/app/src/main/java/jp/s64/android/exmaple/gmafluctinterstitial/InterstitialActivity.kt`
 
 ## 動作検証上の諸注意
 

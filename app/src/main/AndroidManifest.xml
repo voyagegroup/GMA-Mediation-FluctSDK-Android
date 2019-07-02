@@ -49,7 +49,7 @@
 
 
         <!-- region for sample -->
-        <activity android:name=".MainActivity">
+        <activity android:name=".InterstitialActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
