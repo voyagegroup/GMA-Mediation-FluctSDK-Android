@@ -1,0 +1,10 @@
+<resources>
+
+    <string name="app_name">GMA FluctSDK Interstitial Example</string>
+
+    <string name="load">Load</string>
+    <string name="show">Show</string>
+
+    <string name="unit_id_notice">AdUnitId: %1$s</string>
+
+</resources>
