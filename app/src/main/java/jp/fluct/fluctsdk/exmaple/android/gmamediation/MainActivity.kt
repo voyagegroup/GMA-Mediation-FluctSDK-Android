@@ -1,4 +1,4 @@
-package jp.s64.android.example.gmafluctinterstitial
+package jp.fluct.fluctsdk.exmaple.android.gmamediation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,7 +7,6 @@ import android.widget.TextView
 import com.google.android.gms.ads.AdListener
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.InterstitialAd
-import com.google.android.material.button.MaterialButton
 
 class MainActivity : AppCompatActivity() {
 
@@ -61,7 +60,9 @@ class MainActivity : AppCompatActivity() {
         }
 
         resetButtonAppearance()
-        unitIdNotice.text = getString(R.string.unit_id_notice, GMA_AD_UNIT_ID)
+        unitIdNotice.text = getString(R.string.unit_id_notice,
+            GMA_AD_UNIT_ID
+        )
     }
 
     private val listener = object : AdListener() {

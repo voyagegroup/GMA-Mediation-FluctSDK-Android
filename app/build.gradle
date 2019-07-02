@@ -5,7 +5,7 @@ android {
     compileSdkVersion 28
 
     defaultConfig {
-        applicationId "jp.s64.android.example.gmafluctinterstitial"
+        applicationId "jp.fluct.fluctsdk.exmaple.android.gmamediation"
         minSdkVersion 16
         targetSdkVersion 28
         versionCode 1
