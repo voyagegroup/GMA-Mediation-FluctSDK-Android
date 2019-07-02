@@ -24,14 +24,6 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
 
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
-        </activity>
-
         <!-- region Required: FluctSDK動画リワード / インタースティシャルの要求Activity定義 -->
         <activity
             android:name="jp.maio.sdk.android.AdFullscreenActivity"
@@ -53,6 +45,19 @@
             android:name="com.adcolony.sdk.AdColonyAdViewActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:hardwareAccelerated="true" />
+        <!-- endregion -->
+
+
+        <!-- region for sample -->
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".RewardedVideoActivity"/>
         <!-- endregion -->
 
     </application>
