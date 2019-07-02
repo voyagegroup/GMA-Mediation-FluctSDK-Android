@@ -73,6 +73,7 @@ class RewardedVideoActivity : AppCompatActivity() {
 
         // region Required: 広告Close
         override fun onRewardedVideoAdClosed() {
+            ad = null
             resetButtonAppearance()
         }
         // endregion
