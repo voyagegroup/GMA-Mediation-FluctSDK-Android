@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="jp.fluct.fluctsdk.exmaple.android.gmamediation">
 
-
     <!-- region Required: FluctSDKの要求パーミッション -->
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
