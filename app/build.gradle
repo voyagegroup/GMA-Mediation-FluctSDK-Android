@@ -61,7 +61,7 @@ dependencies {
 
     // ご利用いただくメディエーション先に応じ追加してください
     // https://github.com/voyagegroup/FluctSDK-Android/wiki/%E5%8B%95%E7%94%BB%E3%83%AA%E3%83%AF%E3%83%BC%E3%83%89%E5%BA%83%E5%91%8A%E3%81%AE%E5%B0%8E%E5%85%A5%E6%96%B9%E6%B3%95
-    
+
     implementation 'com.maio:android-sdk:1.1.8'
     implementation 'com.unity3d.ads:unity-ads:3.1.0'
     implementation 'com.adcolony:sdk:3.3.7'
