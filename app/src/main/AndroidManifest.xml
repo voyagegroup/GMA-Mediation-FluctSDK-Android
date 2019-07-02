@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          xmlns:tools="http://schemas.android.com/tools" package="jp.s64.android.example.gmafluctinterstitial">
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="jp.s64.android.example.gmafluctinterstitial">
 
 
     <!-- region Required: FluctSDKの要求パーミッション -->
