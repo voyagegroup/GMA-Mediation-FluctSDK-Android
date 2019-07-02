@@ -34,7 +34,7 @@ git clone https://github.com/voyagegroup/GMA-Mediation-FluctSDK-Android.git
 cd GMA-Mediation-FluctSDK-Android
 ```
 
-### Zipファイルにてご案内させて頂いた場合
+#### Zipファイルにてご案内させて頂いた場合
 
 当該ファイルを展開してください。
 
