@@ -1,6 +1,6 @@
-# android-fluct-gma-interstitial-exmaple
+# GMA-Mediation-FluctSDK-Android
 
-Android版FluctSDKを用いたGoogle Mobile Adsインタースティシャルメディエーションのサンプル実装です。
+Android版Google Mobile AdsによるFluctSDKメディエーションのサンプル実装です。
 
 ## 動作検証環境
 
@@ -12,9 +12,9 @@ Android向けFluctSDKおよび当サンプルプロジェクトは下記環境�
 SDKバージョン
 
 - Google Mobile Ads: 16.0.0
-- FluctSDK: 5.4.0
-  - 動画リワードメディエーションアダプター: v2.4.0
-  - Google Mobile Ads向けカスタムイベント: v1.0.0
+- FluctSDK: 5.5.0
+  - 動画リワードメディエーションアダプター: v2.5.0
+  - Google Mobile Ads向けカスタムイベント: v1.1.0
 
 ## プロジェクトの利用方法
 
@@ -22,28 +22,28 @@ SDKバージョン
 
 ### 1. プロジェクトのご用意
 
-### Zipファイルにてご案内させて頂いた場合
-
-当該ファイルを展開してください。
-
-```sh
-unzip android-fluct-gma-interstitial-example-master.zip
-# Archive:  android-fluct-gma-interstitial-example-master.zip
-# ...
-#  extracting: android-fluct-gma-interstitial-example-master/settings.gradle 
-cd android-fluct-gma-interstitial-example-master
-```
-
 #### GitHubリポジトリをご案内させて頂いた場合
 
 ローカルへ当リポジトリをcloneしてください。
 
 ```sh
-git clone https://github.com/S64/android-fluct-gma-interstitial-example.git
-# Cloning into 'android-fluct-gma-interstitial-example'...
+git clone https://github.com/voyagegroup/GMA-Mediation-FluctSDK-Android.git
+# Cloning into 'GMA-Mediation-FluctSDK-Android'...
 # ...
 # Resolving deltas: 100% (42/42), done.
-cd android-fluct-gma-interstitial-example
+cd GMA-Mediation-FluctSDK-Android
+```
+
+### Zipファイルにてご案内させて頂いた場合
+
+当該ファイルを展開してください。
+
+```sh
+unzip GMA-Mediation-FluctSDK-Android-master.zip
+# Archive:  GMA-Mediation-FluctSDK-Android-master.zip
+# ...
+#  extracting: GMA-Mediation-FluctSDK-Android-master/settings.gradle 
+cd GMA-Mediation-FluctSDK-Android-master
 ```
 
 ### 2. Android Studioで開く
@@ -52,10 +52,10 @@ cd android-fluct-gma-interstitial-example
 
 ## 実装上の諸注意
 
-Google Mobile AdsによるFluctSDK動画インタースティシャルを実装頂く際は、以下の点にご注意ください:
+Google Mobile AdsによるFluctSDKメディエーションを実装頂く際は、以下の点にご注意ください:
 
 - 必ずAdUnitIdを変更ください
-  - `InterstitialActivity.kt`内で設定されているAdUnitIdはテスト用のものです
+  - `RewardedVideoActivity.kt`, `InterstitialActivity.kt`内で設定されているAdUnitIdはテスト用のものです
 - Manifest記述, Proguard記述, 依存モジュールの追加を忘れずに行ってください
   - 本番環境にて予期せぬ問題が発生する場合がございます
 
@@ -64,11 +64,12 @@ Google Mobile AdsによるFluctSDK動画インタースティシャルを実装�
 - `/app/build.gradle`
 - `/app/proguard-rules.pro`
 - `/app/src/main/AndroidManifest.xml`
-- `/app/src/main/java/jp/s64/android/exmaple/gmafluctinterstitial/InterstitialActivity.kt`
+- `/app/src/main/java/jp/fluct/fluctsdk/example/android/gmamediation/RewardedVideoActivity.kt`
+- `/app/src/main/java/jp/fluct/fluctsdk/example/android/gmamediation/InterstitialActivity.kt`
 
 ## 動作検証上の諸注意
 
-Google Mobile AdsによるFluctSDK動画インタースティシャルの動作検証をしていただく際は、以下の点にご注意ください:
+Google Mobile AdsによるFluctSDKメディエーションの動作検証をしていただく際は、以下の点にご注意ください:
 
 - 原則実機での動作確認を行ってください
   - Google Mobile Adsの仕様上、エミュレータやテストデバイスではFluctSDKの広告枠が約定しない場合がございます
