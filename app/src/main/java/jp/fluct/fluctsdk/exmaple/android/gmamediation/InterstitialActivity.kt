@@ -32,7 +32,7 @@ class InterstitialActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.interstitial_activity)
 
         loadButton.setOnClickListener {
             // region Required: 広告の初期化・読込
