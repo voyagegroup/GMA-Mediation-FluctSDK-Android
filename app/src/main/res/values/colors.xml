@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- region fluct colors -->
+    <color name="colorPrimary">#2b9e91</color>
+    <color name="colorPrimaryDark">#1a766c</color>
+    <color name="colorAccent">#ffa533</color>
+    <!-- endregion -->
+
+    <color name="colorText">#666</color>
+
+</resources>

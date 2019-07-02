@@ -1,0 +1,16 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="Widget.App.MainSelectionButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:paddingTop">32dp</item>
+        <item name="android:paddingBottom">32dp</item>
+        <item name="android:textColor">@color/colorText</item>
+    </style>
+
+</resources>

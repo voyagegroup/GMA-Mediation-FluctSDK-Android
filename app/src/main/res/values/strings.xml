@@ -1,0 +1,13 @@
+<resources>
+
+    <string name="app_name">GMA-Mediation-FluctSDK-Android</string>
+
+    <string name="load">Load</string>
+    <string name="show">Show</string>
+
+    <string name="unit_id_notice">AdUnitId: %1$s</string>
+
+    <string name="rewarded_video_ad">動画リワード広告</string>
+    <string name="interstitial_video_ad">動画インタースティシャル広告</string>
+
+</resources>
