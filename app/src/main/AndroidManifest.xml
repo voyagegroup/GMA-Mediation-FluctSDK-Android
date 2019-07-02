@@ -24,6 +24,13 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
 
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
         <!-- region Required: FluctSDK動画リワード / インタースティシャルの要求Activity定義 -->
         <activity
             android:name="jp.maio.sdk.android.AdFullscreenActivity"
@@ -49,13 +56,7 @@
 
 
         <!-- region for sample -->
-        <activity android:name=".InterstitialActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
-        </activity>
+        <activity android:name=".InterstitialActivity"/>
 
         <activity android:name=".RewardedVideoActivity"/>
         <!-- endregion -->
