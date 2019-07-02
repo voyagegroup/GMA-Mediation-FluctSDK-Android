@@ -56,9 +56,13 @@
 
 
         <!-- region for sample -->
-        <activity android:name=".InterstitialActivity"/>
+        <activity
+            android:name=".InterstitialActivity"
+            android:label="@string/interstitial_video_ad"/>
 
-        <activity android:name=".RewardedVideoActivity"/>
+        <activity
+            android:name=".RewardedVideoActivity"
+            android:label="@string/rewarded_video_ad"/>
         <!-- endregion -->
 
     </application>
