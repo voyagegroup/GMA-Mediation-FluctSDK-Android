@@ -66,6 +66,10 @@
         <activity
             android:name=".RewardedVideoActivity"
             android:label="@string/rewarded_video_ad"/>
+
+        <activity
+            android:name=".BannerActivity"
+            android:label="@string/banner_ad"/>
         <!-- endregion -->
 
     </application>
