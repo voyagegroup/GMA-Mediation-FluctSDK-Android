@@ -6,8 +6,8 @@ Android版Google Mobile AdsによるFluctSDKメディエーションのサンプ
 
 Android向けFluctSDKおよび当サンプルプロジェクトは下記環境にて開発・検証しております
 
-- macOS High Sierra 10.13.6
-- Android Studio 3.4
+- macOS Mojave 10.14.6
+- Android Studio 3.5.3
 
 SDKバージョン
 
