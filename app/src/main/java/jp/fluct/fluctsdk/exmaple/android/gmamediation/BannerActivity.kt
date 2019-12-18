@@ -5,32 +5,21 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.ads.AdListener
+import com.google.android.gms.ads.AdSize
 import com.google.android.gms.ads.doubleclick.PublisherAdRequest
 import com.google.android.gms.ads.doubleclick.PublisherAdView
 
 class BannerActivity : AppCompatActivity() {
 
-    companion object {
-
-        // region Required: AdMob / GAMで発行されるAdUnitIdを設定してください。下記はテスト枠です。
-        private const val GMA_AD_UNIT_ID
-            = "/62532913/a_fluct.test_1024x768_chocovayashitest.interstitial_11940"
-        // endregion
-
-    }
-
-    private val unitIdNotice by lazy { findViewById<TextView>(R.id.text) }
-    private val publisherAdView by lazy { findViewById<PublisherAdView>(R.id.banner_ad_view) }
+    private val adView by lazy { findViewById<PublisherAdView>(R.id.banner_ad_view) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.banner_activity)
 
-        publisherAdView.adListener = listener
+        adView.adListener = listener
         val request = PublisherAdRequest.Builder().build()
-        publisherAdView.loadAd(request)
-
-        unitIdNotice.text = getString(R.string.unit_id_notice, GMA_AD_UNIT_ID)
+        adView.loadAd(request)
     }
 
     private val listener = object : AdListener() {
