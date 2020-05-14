@@ -1,15 +1,16 @@
 package jp.fluct.fluctsdk.exmaple.android.gmamediation
 
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.ads.AdRequest
-import com.google.android.gms.ads.MobileAds
-import com.google.android.gms.ads.reward.RewardItem
-import com.google.android.gms.ads.reward.RewardedVideoAd
-import com.google.android.gms.ads.reward.RewardedVideoAdListener
+import com.google.android.gms.ads.rewarded.RewardItem
+import com.google.android.gms.ads.rewarded.RewardedAd
+import com.google.android.gms.ads.rewarded.RewardedAdCallback
+import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback
 
 class RewardedVideoActivity : AppCompatActivity() {
 
@@ -27,7 +28,7 @@ class RewardedVideoActivity : AppCompatActivity() {
 
     }
 
-    private var ad: RewardedVideoAd? = null
+    private var ad: RewardedAd? = null
 
     private val unitIdNotice by lazy { findViewById<TextView>(R.id.text) }
     private val loadButton by lazy { findViewById<Button>(R.id.load) }
@@ -39,19 +40,13 @@ class RewardedVideoActivity : AppCompatActivity() {
 
         loadButton.setOnClickListener {
             // region Required: 広告の初期化・読込
-            ad = MobileAds.getRewardedVideoAdInstance(this@RewardedVideoActivity)
-                .apply {
-                    rewardedVideoAdListener = listener
-                }
+            ad = RewardedAd(this, GMA_AD_UNIT_ID)
 
+            val adRequest = AdRequest.Builder()
+                .tagForChildDirectedTreatment(TAG_FOR_CHILD_DIRECTED_TREATMENT)
+                .build()
 
-            ad!!.loadAd(
-                GMA_AD_UNIT_ID,
-                AdRequest.Builder()
-                    .setGender(GENDER)
-                    .tagForChildDirectedTreatment(TAG_FOR_CHILD_DIRECTED_TREATMENT)
-                    .build()
-            )
+            ad!!.loadAd(adRequest, adLoadCallback)
             // endregion
 
             resetButtonAppearance()
@@ -59,7 +54,8 @@ class RewardedVideoActivity : AppCompatActivity() {
 
         showButton.setOnClickListener {
             // region Required: 広告表示
-            ad!!.show()
+            ad!!.show(this, adCallback)
+
             // endregion
         }
 
@@ -69,53 +65,47 @@ class RewardedVideoActivity : AppCompatActivity() {
         )
     }
 
-    private val listener = object : RewardedVideoAdListener {
+    private val adLoadCallback = object: RewardedAdLoadCallback() {
 
-        // region Required: 広告Close
-        override fun onRewardedVideoAdClosed() {
+        // region: 広告読込完了
+        override fun onRewardedAdLoaded() {
+            resetButtonAppearance()
+        }
+        // endregion
+
+        // region: 広告読込失敗。適切な処理を行ってください
+        override fun onRewardedAdFailedToLoad(errorCode: Int) {
+            ad = null
+            resetButtonAppearance()
+        }
+        // endregion
+    }
+
+    private val adCallback = object: RewardedAdCallback() {
+
+        // region: 広告opened
+        override fun onRewardedAdOpened() {
+        }
+        // endregion
+
+        // region: 広告Close
+        override fun onRewardedAdClosed() {
             ad = null
             resetButtonAppearance()
         }
         // endregion
 
-        // region Required: 広告読込完了
-        override fun onRewardedVideoAdLoaded() {
-            resetButtonAppearance()
-        }
-        // endregion
-
-        // Required: リワード付与。適切な処理を行ってください
-        override fun onRewarded(p0: RewardItem?) {
+        // region: リワード付与。適切な処理を行ってください
+        override fun onUserEarnedReward(rewardItem: RewardItem) {
             Toast.makeText(this@RewardedVideoActivity, "Rewarded!", Toast.LENGTH_LONG)
                 .show()
         }
         // endregion
 
-        // region Required: 広告読込失敗。適切な処理を行ってください
-        override fun onRewardedVideoAdFailedToLoad(p0: Int) {
-            ad = null
-            resetButtonAppearance()
+        // region: 広告の表示失敗
+        override fun onRewardedAdFailedToShow(errorCode: Int) {
         }
         // endregion
-
-        override fun onRewardedVideoAdLeftApplication() {
-            // Optional: 広告LeftApplication
-        }
-
-        override fun onRewardedVideoAdOpened() {
-            // Optional: 広告Opened
-        }
-
-        override fun onRewardedVideoCompleted() {
-            // Optional: 広告Completed
-            ad = null
-            resetButtonAppearance()
-        }
-
-        override fun onRewardedVideoStarted() {
-            // Optional: 広告Start
-        }
-
     }
 
     private fun resetButtonAppearance() {
