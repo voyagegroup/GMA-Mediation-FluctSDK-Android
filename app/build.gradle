@@ -29,7 +29,7 @@ repositories {
     jcenter()
 
     // region Required: FluctSDKの依存関係記述
-    mavenLocal()
+    maven { url 'https://voyagegroup.github.io/FluctSDK-Android/m2/repository' }
     // endregion
 
     // region Required: FluctSDK動画リワード / インタースティシャルの依存関係記述

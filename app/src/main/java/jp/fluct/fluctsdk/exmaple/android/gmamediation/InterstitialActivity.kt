@@ -2,7 +2,6 @@ package jp.fluct.fluctsdk.exmaple.android.gmamediation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import android.widget.TextView
 import com.google.android.gms.ads.AdListener
@@ -79,7 +78,6 @@ class InterstitialActivity : AppCompatActivity() {
         override fun onAdLoaded() {
             super.onAdLoaded()
             resetButtonAppearance()
-            Log.d("aaaaaaaa", "Banner adapter class name: " + ad!!.mediationAdapterClassName);
         }
         // endregion
 
