@@ -23,6 +23,10 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
 
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-2222899768110117~4239028417"/>
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>

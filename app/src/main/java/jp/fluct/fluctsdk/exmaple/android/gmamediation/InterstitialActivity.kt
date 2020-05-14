@@ -14,7 +14,7 @@ class InterstitialActivity : AppCompatActivity() {
 
         // region Required: AdMob / GAMで発行されるAdUnitIdを設定してください。下記はテスト枠です。
         private const val GMA_AD_UNIT_ID
-            = "/62532913/a_fluct.test_1024x768_chocovayashitest.interstitial_11940"
+            = "ca-app-pub-2222899768110117/7494024949"
         // endregion
 
         // reigon Optional: 必要に応じて設定してください

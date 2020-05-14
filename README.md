@@ -11,10 +11,10 @@ Android向けFluctSDKおよび当サンプルプロジェクトは下記環境�
 
 SDKバージョン
 
-- Google Mobile Ads: 16.0.0
-- FluctSDK: 5.7.0
-  - 動画リワードメディエーションアダプター: v2.7.0
-  - Google Mobile Ads向けカスタムイベント: v1.3.0
+- Google Mobile Ads: 17.2.0
+- FluctSDK: 7.6.0
+  - 動画リワードメディエーションアダプター: 7.6.0
+  - Google Mobile Ads向けカスタムイベント: 7.6.0
 
 ## プロジェクトの利用方法
 
@@ -55,17 +55,17 @@ cd GMA-Mediation-FluctSDK-Android-master
 Google Mobile AdsによるFluctSDKメディエーションを実装頂く際は、以下の点にご注意ください:
 
 - 必ずAdUnitIdを変更ください
-  - `RewardedVideoActivity.kt`, `InterstitialActivity.kt`内で設定されているAdUnitIdはテスト用のものです
+  - `RewardedVideoActivity.kt`, `InterstitialActivity.kt`, `banner_activity.xml`内で設定されているAdUnitIdはテスト用のものです
 - Manifest記述, Proguard記述, 依存モジュールの追加を忘れずに行ってください
   - 本番環境にて予期せぬ問題が発生する場合がございます
 
 なお、上記はサンプル内の下記ファイルにて実装しております:
 
 - `/app/build.gradle`
-- `/app/proguard-rules.pro`
 - `/app/src/main/AndroidManifest.xml`
 - `/app/src/main/java/jp/fluct/fluctsdk/example/android/gmamediation/RewardedVideoActivity.kt`
 - `/app/src/main/java/jp/fluct/fluctsdk/example/android/gmamediation/InterstitialActivity.kt`
+- `/app/src/main/res/layout/banner_activity.xml`
 
 ## 動作検証上の諸注意
 
