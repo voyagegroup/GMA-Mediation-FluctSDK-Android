@@ -1,24 +1,22 @@
 package jp.fluct.fluctsdk.exmaple.android.gmamediation
 
 import android.os.Bundle
-import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.ads.AdListener
-import com.google.android.gms.ads.AdSize
-import com.google.android.gms.ads.doubleclick.PublisherAdRequest
-import com.google.android.gms.ads.doubleclick.PublisherAdView
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdView
 
 class BannerActivity : AppCompatActivity() {
 
-    private val adView by lazy { findViewById<PublisherAdView>(R.id.banner_ad_view) }
+    private val adView by lazy { findViewById<AdView>(R.id.banner_ad_view) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.banner_activity)
 
         adView.adListener = listener
-        val request = PublisherAdRequest.Builder().build()
+        val request = AdRequest.Builder().build()
         adView.loadAd(request)
     }
 
