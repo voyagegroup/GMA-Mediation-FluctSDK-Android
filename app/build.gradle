@@ -11,17 +11,15 @@ android {
         versionCode 5
         versionName "1.4.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
     }
 
     buildTypes {
         debug {
-            // 必要に応じ、Proguardを有効化し動作検証を行ってください
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
         release {
             minifyEnabled true
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
 }
@@ -31,7 +29,7 @@ repositories {
     jcenter()
 
     // region Required: FluctSDKの依存関係記述
-    maven { url 'https://voyagegroup.github.io/FluctSDK-Android/m2/repository' }
+    mavenLocal()
     // endregion
 
     // region Required: FluctSDK動画リワード / インタースティシャルの依存関係記述
@@ -48,12 +46,13 @@ dependencies {
     implementation "com.google.android.material:material:$versions.material"
 
     // region Required: Google Mobile Adsへの依存関係記述
-    implementation 'com.google.android.gms:play-services-ads:16.0.0'
+    implementation 'com.google.android.gms:play-services-ads:17.2.0'
     // endregion
 
     // region Required: FluctSDKの依存関係記述
     implementation "jp.fluct:FluctSDK:$versions.fluct"
     implementation "jp.fluct.fluctsdk:banner:$versions.fluct"
+    implementation "jp.fluct.fluctsdk:fullscreen-ads:$versions.fluct"
     implementation 'com.google.android.gms:play-services-base:16.0.1'
     implementation 'com.google.android.gms:play-services-ads-identifier:16.0.0'
     // endregion
@@ -69,6 +68,10 @@ dependencies {
     implementation "jp.fluct.mediation:rewardedvideo-mediation-maio:$versions.fluct"
     implementation "jp.fluct.mediation:rewardedvideo-mediation-unityads:$versions.fluct"
     implementation "jp.fluct.mediation:rewardedvideo-mediation-adcolony:$versions.fluct"
+
+    implementation "jp.fluct.mediation:videointerstitial-mediation-adcolony:$versions.fluct"
+    implementation "jp.fluct.mediation:videointerstitial-mediation-maio:$versions.fluct"
+    implementation "jp.fluct.mediation:videointerstitial-mediation-unityads:$versions.fluct"
     // endregion
 
     // region Required: FluctSDK GMAメディエーションの依存関係記述

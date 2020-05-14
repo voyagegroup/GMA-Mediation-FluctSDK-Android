@@ -17,7 +17,7 @@ class RewardedVideoActivity : AppCompatActivity() {
 
         // region Required: AdMob / GAMで発行されるAdUnitIdを設定してください。下記はテスト枠です。
         private const val GMA_AD_UNIT_ID
-            = "/62532913/tujibayasi_test_unit"
+            = "ca-app-pub-2222899768110117/1421293380"
         // endregion
 
         // reigon Optional: 必要に応じて設定してください
