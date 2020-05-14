@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     tools:context=".BannerActivity">
 
-    <com.google.android.gms.ads.doubleclick.PublisherAdView
+    <com.google.android.gms.ads.AdView
         android:id="@+id/banner_ad_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -17,7 +17,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         ads:adSize="BANNER"
-        ads:adUnitId="/62532913/a_fluct.test_320x50_androidtest_11940"
+        ads:adUnitId="ca-app-pub-2222899768110117/4047456723"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
