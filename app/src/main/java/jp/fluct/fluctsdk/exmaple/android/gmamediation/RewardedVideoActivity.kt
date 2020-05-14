@@ -23,7 +23,6 @@ class RewardedVideoActivity : AppCompatActivity() {
 
         // reigon Optional: 必要に応じて設定してください
         private const val TAG_FOR_CHILD_DIRECTED_TREATMENT = false
-        private const val GENDER = AdRequest.GENDER_UNKNOWN
         // endregion
 
     }

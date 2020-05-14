@@ -19,7 +19,6 @@ class InterstitialActivity : AppCompatActivity() {
 
         // reigon Optional: 必要に応じて設定してください
         private const val TAG_FOR_CHILD_DIRECTED_TREATMENT = false
-        private const val GENDER = AdRequest.GENDER_UNKNOWN
         // endregion
 
     }
@@ -44,7 +43,6 @@ class InterstitialActivity : AppCompatActivity() {
 
             ad!!.loadAd(
                 AdRequest.Builder()
-                    .setGender(GENDER)
                     .tagForChildDirectedTreatment(TAG_FOR_CHILD_DIRECTED_TREATMENT)
                     .build()
             )
