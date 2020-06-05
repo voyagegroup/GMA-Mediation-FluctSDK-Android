@@ -3,12 +3,12 @@
 buildscript {
     ext {
         versions = [
-                'kotlin': '1.3.31',
-                'androidPlugin': '3.4.0',
-                'appcompat': '1.0.2',
-                'constraintlayout': '1.1.3',
-                'material': '1.0.0',
-                'fluct': '7.6.0'
+            'kotlin'          : '1.3.31',
+            'androidPlugin'   : '3.4.0',
+            'appcompat'       : '1.0.2',
+            'constraintlayout': '1.1.3',
+            'material'        : '1.0.0',
+            'fluct'           : '7.8.0'
         ]
     }
 
